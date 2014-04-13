@@ -27,8 +27,8 @@ PRODUCT_COPY_FILES += \
     device/lge/msm8960-common/configs/media_codecs.xml:system/etc/media_codecs.xml
 
 # apn config
-PRODUCT_COPY_FILES += \
-    device/lge/msm8960-common/configs/apns-conf.xml:/system/etc/apns-conf.xml
+#PRODUCT_COPY_FILES += \
+#   device/lge/msm8960-common/configs/apns-conf.xml:/system/etc/apns-conf.xml
 
 # Sound configs
 PRODUCT_COPY_FILES += \
@@ -126,16 +126,6 @@ PRODUCT_PACKAGES += \
     make_ext4fs \
     setup_fs
 
-# Jellybean Adreno firmware
-#PRODUCT_COPY_FILES += \
-#    device/lge/msm8960-common/firmware/a225p5_pm4.fw:/system/etc/firmware/a225p5_pm4.fw \
-#    device/lge/msm8960-common/firmware/a225_pfp.fw:/system/etc/firmware/a225_pfp.fw \
-#    device/lge/msm8960-common/firmware/a225_pm4.fw:/system/etc/firmware/a225_pm4.fw \
-#    device/lge/msm8960-common/firmware/leia_pfp_470.fw:/system/etc/firmware/leia_pfp_470.fw \
-#    device/lge/msm8960-common/firmware/leia_pm4_470.fw:/system/etc/firmware/leia_pm4_470.fw \
-#    device/lge/msm8960-common/firmware/yamato_pfp.fw:/system/etc/firmware/yamato_pfp.fw \
-#    device/lge/msm8960-common/firmware/yamato_pm4.fw:/system/etc/firmware/yamato_pm4.fw \
-
 # Jellybean Adreno libs
 PRODUCT_COPY_FILES += \
     device/lge/msm8960-common/jb_libs/lib/libc2d2_z180.so:/system/lib/libc2d2_z180.so \
@@ -149,8 +139,3 @@ PRODUCT_COPY_FILES += \
     device/lge/msm8960-common/jb_libs/egl/libGLESv2_adreno200.so:/system/lib/egl/libGLESv2_adreno200.so \
     device/lge/msm8960-common/jb_libs/egl/libGLESv2S3D_adreno200.so:/system/lib/egl/libGLESv2S3D_adreno200.so \
     device/lge/msm8960-common/jb_libs/egl/libq3dtools_adreno200.so:/system/lib/egl/libq3dtools_adreno200.so
-
-# KoreanIME
-PRODUCT_COPY_FILES += \
-    device/lge/msm8960-common/prebuilt/KoreanIME.apk:/system/app/LatinIME.apk \
-    device/lge/msm8960-common/prebuilt/libjni_koreanime.so:/system/lib/libjni_koreanime.so
