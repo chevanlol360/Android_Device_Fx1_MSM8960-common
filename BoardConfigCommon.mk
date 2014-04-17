@@ -84,8 +84,24 @@ TARGET_USES_ION := true
 #TARGET_HAVE_BYPASS := false
 #TARGET_USES_OVERLAY := true
 #TARGET_QCOM_HDMI_OUT := true
-BOARD_EGL_CFG := device/lge/msm8960-common/configs/egl.cfg
+BOARD_EGL_CFG := device/lge/msm8960-common2/configs/egl.cfg
 
 # Webkit
 ENABLE_WEBGL := true
 TARGET_FORCE_CPU_UPLOAD := true
+
+
+# Flags for Krait CPU
+COMMON_GLOBAL_CFLAGS += -D__ARM_USE_PLD -D__ARM_CACHE_LINE_SIZE=64
+ifneq ($(VARIENT_REQUIRE_3.0_KERNEL),true)
+COMMON_GLOBAL_CFLAGS += -DNEW_ION_API
+endif
+TARGET_CPU_VARIANT := krait
+
+# Platform
+TARGET_BOARD_PLATFORM := msm8960
+TARGET_BOARD_PLATFORM_GPU := qcom-adreno200
+TARGET_ARCH_VARIANT_CPU := cortex-a9
+
+TARGET_QCOM_DISPLAY_VARIANT := caf
+

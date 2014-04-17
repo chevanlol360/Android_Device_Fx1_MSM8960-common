@@ -16,15 +16,15 @@
 
 # 2nd-init
 PRODUCT_COPY_FILES += \
-    device/lge/msm8960-common/2nd-init/2nd-init:/system/xbin/2nd-init \
-    device/lge/msm8960-common/2nd-init/mksh2:/system/xbin/mksh2 \
-    device/lge/msm8960-common/2nd-init/cm10.sh:/system/xbin/cm10.sh \
-    device/lge/msm8960-common/2nd-init/recovery.sh:/system/xbin/recovery.sh \
-    device/lge/msm8960-common/2nd-init/taskset:/system/xbin/taskset
+    device/lge/msm8960-common2/2nd-init/2nd-init:/system/xbin/2nd-init \
+    device/lge/msm8960-common2/2nd-init/mksh2:/system/xbin/mksh2 \
+    device/lge/msm8960-common2/2nd-init/cm10.sh:/system/xbin/cm10.sh \
+    device/lge/msm8960-common2/2nd-init/recovery.sh:/system/xbin/recovery.sh \
+    device/lge/msm8960-common2/2nd-init/taskset:/system/xbin/taskset
 
 # Media config
 PRODUCT_COPY_FILES += \
-    device/lge/msm8960-common/configs/media_codecs.xml:system/etc/media_codecs.xml
+    device/lge/msm8960-common2/configs/media_codecs.xml:system/etc/media_codecs.xml
 
 # apn config
 #PRODUCT_COPY_FILES += \
@@ -32,7 +32,7 @@ PRODUCT_COPY_FILES += \
 
 # Sound configs
 PRODUCT_COPY_FILES += \
-    device/lge/msm8960-common/configs/audio_policy.conf:system/etc/audio_policy.conf
+    device/lge/msm8960-common2/configs/audio_policy.conf:system/etc/audio_policy.conf
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -128,14 +128,14 @@ PRODUCT_PACKAGES += \
 
 # Jellybean Adreno libs
 PRODUCT_COPY_FILES += \
-    device/lge/msm8960-common/jb_libs/lib/libc2d2_z180.so:/system/lib/libc2d2_z180.so \
-    device/lge/msm8960-common/jb_libs/lib/libC2D2.so:/system/lib/libC2D2.so \
-    device/lge/msm8960-common/jb_libs/lib/libgsl.so:/system/lib/libgsl.so \
-    device/lge/msm8960-common/jb_libs/lib/libOpenVG.so:/system/lib/libOpenVG.so \
-    device/lge/msm8960-common/jb_libs/lib/libsc-a2xx.so:/system/lib/libsc-a2xx.so \
-    device/lge/msm8960-common/jb_libs/egl/eglsubAndroid.so:/system/lib/egl/eglsubAndroid.so \
-    device/lge/msm8960-common/jb_libs/egl/libEGL_adreno200.so:/system/lib/egl/libEGL_adreno200.so \
-    device/lge/msm8960-common/jb_libs/egl/libGLESv1_CM_adreno200.so:/system/lib/egl/libGLESv1_CM_adreno200.so \
-    device/lge/msm8960-common/jb_libs/egl/libGLESv2_adreno200.so:/system/lib/egl/libGLESv2_adreno200.so \
-    device/lge/msm8960-common/jb_libs/egl/libGLESv2S3D_adreno200.so:/system/lib/egl/libGLESv2S3D_adreno200.so \
-    device/lge/msm8960-common/jb_libs/egl/libq3dtools_adreno200.so:/system/lib/egl/libq3dtools_adreno200.so
+    device/lge/msm8960-common2/jb_libs/lib/libc2d2_z180.so:/system/lib/libc2d2_z180.so \
+    device/lge/msm8960-common2/jb_libs/lib/libC2D2.so:/system/lib/libC2D2.so \
+    device/lge/msm8960-common2/jb_libs/lib/libgsl.so:/system/lib/libgsl.so \
+    device/lge/msm8960-common2/jb_libs/lib/libOpenVG.so:/system/lib/libOpenVG.so \
+    device/lge/msm8960-common2/jb_libs/lib/libsc-a2xx.so:/system/lib/libsc-a2xx.so \
+    device/lge/msm8960-common2/jb_libs/egl/eglsubAndroid.so:/system/lib/egl/eglsubAndroid.so \
+    device/lge/msm8960-common2/jb_libs/egl/libEGL_adreno200.so:/system/lib/egl/libEGL_adreno200.so \
+    device/lge/msm8960-common2/jb_libs/egl/libGLESv1_CM_adreno200.so:/system/lib/egl/libGLESv1_CM_adreno200.so \
+    device/lge/msm8960-common2/jb_libs/egl/libGLESv2_adreno200.so:/system/lib/egl/libGLESv2_adreno200.so \
+    device/lge/msm8960-common2/jb_libs/egl/libGLESv2S3D_adreno200.so:/system/lib/egl/libGLESv2S3D_adreno200.so \
+    device/lge/msm8960-common2/jb_libs/egl/libq3dtools_adreno200.so:/system/lib/egl/libq3dtools_adreno200.so
