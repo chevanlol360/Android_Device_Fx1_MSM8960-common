@@ -50,7 +50,7 @@ COMMON_GLOBAL_CFLAGS += -DQCOM_HARDWARE
 TARGET_BOOTANIMATION_PRELOAD := true
 
 # ICS proprietary blob compatibility
-USE_CAMERA_STUB := false
+USE_CAMERA_STUB := true
 
 # PMEM compatibility
 BOARD_NEEDS_MEMORYHEAPPMEM := true
@@ -78,7 +78,6 @@ BOARD_HAVE_BLUETOOTH := true
 # Graphics
 COMMON_GLOBAL_CFLAGS += -DQCOM_NO_SECURE_PLAYBACK -DQCOM_ROTATOR_KERNEL_FORMATS
 USE_OPENGL_RENDERER := true
-TARGET_NO_HW_VSYNC := true
 TARGET_USES_C2D_COMPOSITION := true
 TARGET_USES_ION := true
 #TARGET_HAVE_BYPASS := false
@@ -89,3 +88,41 @@ BOARD_EGL_CFG := device/lge/msm8960-common/configs/egl.cfg
 # Webkit
 ENABLE_WEBGL := true
 TARGET_FORCE_CPU_UPLOAD := true
+
+
+# Flags for Krait CPU
+COMMON_GLOBAL_CFLAGS += -D__ARM_USE_PLD -D__ARM_CACHE_LINE_SIZE=64
+ifneq ($(VARIENT_REQUIRE_3.0_KERNEL),true)
+COMMON_GLOBAL_CFLAGS += -DNEW_ION_API
+endif
+TARGET_CPU_VARIANT := krait
+
+# Platform
+TARGET_BOARD_PLATFORM := msm8960
+TARGET_BOARD_PLATFORM_GPU := qcom-adreno200
+TARGET_ARCH_VARIANT_CPU := cortex-a9
+
+TARGET_QCOM_DISPLAY_VARIANT := caf
+
+BOARD_SEPOLICY_DIRS += \
+        device/lge/msm8960-common/sepolicy
+		
+BOARD_SEPOLICY_UNION += \
+	genfs_contexts \
+	app.te \
+	bluetooth.te \
+	device.te \
+	domain.te \
+	drmserver.te \
+	file.te \
+	file_contexts \
+	hci_init.te \
+	init_hell.te \
+	keystore.te \
+	mediaserver.te \
+	kickstart.te \
+	rild.te \
+	surfaceflinger.te \
+	system.te \
+	ueventd.te \
+	wpa.te
