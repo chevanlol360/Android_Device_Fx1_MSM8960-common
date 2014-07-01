@@ -49,8 +49,7 @@ COMMON_GLOBAL_CFLAGS += -DQCOM_HARDWARE
 # Preload bootanimation
 TARGET_BOOTANIMATION_PRELOAD := true
 
-# ICS proprietary blob compatibility
-USE_CAMERA_STUB := true
+
 
 # PMEM compatibility
 BOARD_NEEDS_MEMORYHEAPPMEM := true
