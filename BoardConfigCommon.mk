@@ -103,25 +103,25 @@ TARGET_ARCH_VARIANT_CPU := cortex-a9
 
 TARGET_QCOM_DISPLAY_VARIANT := caf
 
-#BOARD_SEPOLICY_DIRS += \
-#        device/lge/msm8960-common/sepolicy
+BOARD_SEPOLICY_DIRS += \
+        device/lge/msm8960-common/sepolicy
 		
-#BOARD_SEPOLICY_UNION += \
-#	genfs_contexts \
-#	app.te \
-#	bluetooth.te \
-#	device.te \
-#	domain.te \
-#	drmserver.te \
-#	file.te \
-#	file_contexts \
-#	hci_init.te \
-#	init_hell.te \
-#	keystore.te \
-#	mediaserver.te \
-#	kickstart.te \
-#	rild.te \
-#	surfaceflinger.te \
-#	system.te \
-#	ueventd.te \
-#	wpa.te
+BOARD_SEPOLICY_UNION += \
+	genfs_contexts \
+	app.te \
+	bluetooth.te \
+	device.te \
+	domain.te \
+	drmserver.te \
+	file.te \
+	file_contexts \
+	hci_init.te \
+	init_hell.te \
+	keystore.te \
+	mediaserver.te \
+	kickstart.te \
+	rild.te \
+	surfaceflinger.te \
+	system.te \
+	ueventd.te \
+	wpa.te
